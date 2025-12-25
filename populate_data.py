@@ -5,7 +5,7 @@ Script para popular o banco de dados com atividades de exemplo
 import os
 import sys
 import django
-from datetime import date, timedelta
+from datetime import date, timedelta, time
 
 # Configurar Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ufc_activities_django.settings')
@@ -39,7 +39,7 @@ def create_sample_data():
             'status': 'UPCOMING',
             'start_date': date.today() + timedelta(days=30),
             'end_date': date.today() + timedelta(days=90),
-            'time': '19:00 - 22:00',
+            'time': time(19, 0),
             'location': 'Laboratório de Informática 1',
             'coordinator': 'Prof. Carlos Silva',
             'participants': 25,
@@ -57,7 +57,7 @@ def create_sample_data():
             'status': 'ACTIVE',
             'start_date': date.today() - timedelta(days=5),
             'end_date': date.today() + timedelta(days=2),
-            'time': '14:00 - 18:00',
+            'time': time(14, 0),
             'location': 'Auditório Principal',
             'coordinator': 'Profa. Ana Santos',
             'participants': 40,
@@ -74,7 +74,7 @@ def create_sample_data():
             'status': 'UPCOMING',
             'start_date': date.today() + timedelta(days=15),
             'end_date': date.today() + timedelta(days=15),
-            'time': '08:00 - 17:00',
+            'time': time(8, 0),
             'location': 'Centro de Convenções',
             'coordinator': 'Prof. João Oliveira',
             'participants': 100,
@@ -90,7 +90,7 @@ def create_sample_data():
             'status': 'ACTIVE',
             'start_date': date.today() - timedelta(days=60),
             'end_date': date.today() + timedelta(days=120),
-            'time': '08:00 - 12:00',
+            'time': time(8, 0),
             'location': 'Comunidades locais',
             'coordinator': 'Profa. Maria Fernanda',
             'participants': 15,
@@ -107,7 +107,7 @@ def create_sample_data():
             'status': 'ACTIVE',
             'start_date': date.today() - timedelta(days=180),
             'end_date': date.today() + timedelta(days=365),
-            'time': '14:00 - 18:00',
+            'time': time(14, 0),
             'location': 'Laboratório de Pesquisa Avançada',
             'coordinator': 'Prof. Roberto Andrade',
             'participants': 8,
